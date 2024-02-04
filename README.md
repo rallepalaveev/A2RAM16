@@ -10,7 +10,9 @@ The logic of the card completely follows the design recommendations of the addit
 * Two banks of 4kB are mapped to $D000-$DFFF
 * One bank of 8kB is mapped to $E000-$FFFF
 
-Prohgram switches to be used:
+**IMPORTANT: It is very important to NOT use this card on computers which already have the 16kB available as there would be clashes between the catd and the existing RAM and supporting logic.**
+
+Program switches to be used:
 
 |Address  | Symbolic Name | Bank | Read From | Write to RAM? |
 |:--------|:--------------|:-----|:----------|:--------------|
