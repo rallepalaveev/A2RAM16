@@ -13,7 +13,7 @@ Prohgram switches to be used:
 
 |Address  | Symbolic Name | Bank | Read From | Write to RAM? |
 |:--------|:--------------|:-----|:----------|:--------------|
-|$C080    | READBSR2      | 2    | RAM       | No            |
+|$C080    | READBSR2      | 2    | RAM| No            |
 |$C081    | WRITEBSR2     | 2    | ROM       | Yes* |
 |$C082    | OFFBSR2       | 2    | ROM        | No |
 |$C083    | RDWRBSR2      | 2    | RAM        | Yes* |
