@@ -12,7 +12,7 @@ The logic of the card completely follows the design recommendations of the addit
 * Two banks of 4kB are mapped to $D000-$DFFF
 * One bank of 8kB is mapped to $E000-$FFFF
 
-Program switches used:
+Bank-switched RAM soft switches:
 
 |Address  | Symbolic Name | Bank | Read From | Write to RAM? |
 |:--------|:--------------|:-----|:----------|:--------------|
@@ -24,3 +24,14 @@ Program switches used:
 |$C089|WRITEBSR1|1|ROM|Yes*|
 |$C08A|OFFBSR1|1ROM|No|
 |$C08B|RDWRBSR1|1|RAM|Yes*|
+
+Bank-switched RAM status locations:
+
+
+|Address  | Symbolic Name | Description                      |
+|:--------|:--------------|:---------------------------------|
+|$C011|BSRBANK2|If this location is > = $80, then Bank2 of bankswitched RAM has been selected; if not, Bank1 has been selected.|
+|$C012|BSRREADRAM|If this location is > = $80, then bank-switched RAM has been read-enabled; if not, the corresponding ROM locations are enabled.|
+
+
+
