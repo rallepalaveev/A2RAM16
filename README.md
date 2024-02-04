@@ -28,8 +28,8 @@ Bank-switched RAM soft switches:
 Bank-switched RAM status locations:
 
 
-|Address  | Symbolic Name | Description                      |
-|:--------|:--------------|:---------------------------------|
+|Address  | Symbolic Name  | Description                      |
+|:--------|:---------------|:---------------------------------|
 |$C011|BSRBANK2|If this location is > = $80, then Bank2 of bankswitched RAM has been selected; if not, Bank1 has been selected.|
 |$C012|BSRREADRAM|If this location is > = $80, then bank-switched RAM has been read-enabled; if not, the corresponding ROM locations are enabled.|
 
