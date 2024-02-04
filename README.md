@@ -14,7 +14,7 @@ The logic of the card completely follows the design recommendations of the addit
 
 Bank-switched RAM soft switches:
 
-|Address  | Symbolic Name | Bank | Read From | Write to RAM? |
+| Address | Symbolic Name | Bank | Read From | Write to RAM? |
 |:--------|:--------------|:-----|:----------|:--------------|
 |$C080|READBSR2|2|RAM|No|
 |$C081|WRITEBSR2|2|ROM|Yes*|
@@ -28,8 +28,8 @@ Bank-switched RAM soft switches:
 Bank-switched RAM status locations:
 
 
-|Address  | Symbolic Name     | Description                      |
-|:--------|:------------------|:---------------------------------|
+| Address | Symbolic Name | Description                      |
+|:--------|:--------------|:---------------------------------|
 |$C011|BSRBANK2|If this location is > = $80, then Bank2 of bankswitched RAM has been selected; if not, Bank1 has been selected.|
 |$C012|BSRREADRAM|If this location is > = $80, then bank-switched RAM has been read-enabled; if not, the corresponding ROM locations are enabled.|
 
