@@ -4,7 +4,7 @@ The cards that are available, AKA Language cards, not only occupy a slot, but al
 
 However, I wanted to create a card which simply adds the missing 16kB, based on modern chips like SRAM, and not needing to have any additional cables to connect to the motherboard.
 
-This project is based on a card with one 32kB SRAM chip (only half is used), two PLD logics to decode siganls and one 4-way line buffers chip.
+This project is based on a card with one 32kB SRAM chip (only half is used), two PLD logics to decode siganls and one 4-way line buffers chip. I might also do a variant with 2x 8kB SRAM chips for those who'd hate to have the unused 1/2 of the SRAM chip - it is a simple change.
 
 The logic of the card completely follows the design recommendations of the additional 16kB:
 * Two banks of 4kB are mapped to $D000-$DFFF
