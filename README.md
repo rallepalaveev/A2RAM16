@@ -13,11 +13,11 @@ Prohgram switches to be used:
 
 |Address  | Symbolic Name | Bank | Read From | Write to RAM? |
 |:--------|:--------------|:-----|:----------|:--------------|
-|$C080    | READBSR2      | 2    | RAM| No            |
-|$C081    | WRITEBSR2     | 2    | ROM       | Yes* |
-|$C082    | OFFBSR2       | 2    | ROM        | No |
-|$C083    | RDWRBSR2      | 2    | RAM        | Yes* |
-|$C088    | READBSR1      | 1    | RAM        | No |
-|$C089    | WRITEBSR1     | 1    | ROM       |  Yes* |
-|$C08A    | OFFBSR1       | 1    | ROM | No |
-|$C08B    | RDWRBSR1      | 1    | RAM | Yes* |
+|$C080|READBSR2|2|RAM|No|
+|$C081|WRITEBSR2|2|ROM|Yes*|
+|$C082|OFFBSR2|2|ROM|No|
+|$C083|RDWRBSR2|2|RAM|Yes*|
+|$C088|READBSR1|1|RAM|No|
+|$C089|WRITEBSR1|1|ROM|Yes*|
+|$C08A|OFFBSR1|1ROM|No|
+|$C08B|RDWRBSR1|1|RAM|Yes*|
