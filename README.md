@@ -38,6 +38,7 @@ The card houses the 3 softswitches above which upon reset are configured in the 
 * Bank 2 is selected
 * ROM is readable.
 * RAM is writeable
+
 The card decodes the full A0-A15 address and if a memory location is selected from $D000 to $FFFF, it responsd based on the 3 softswitches - it activates the RAM for writing or reading, while disabling the ROM by using the /INH signal.
 There are 3 LEDs which show the status of the 3 soft switches.
 
