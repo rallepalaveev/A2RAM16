@@ -27,13 +27,17 @@ Bank-switched RAM soft switches:
 
 Bank-switched RAM status locations:
 
-
 | Address | Symbolic Name | Description                      |
 |:--------|:--------------|:---------------------------------|
 |$C011|BSRBANK2|If this location is > = $80, then Bank2 of bankswitched RAM has been selected; if not, Bank1 has been selected.|
 |$C012|BSRREADRAM|If this location is > = $80, then bank-switched RAM has been read-enabled; if not, the corresponding ROM locations are enabled.|
 
-The card houses the 3 softswitches above which upon reset are configures that Bank 2 is selected, RAM is writeable and ROM is readable.
+Operation:
+
+The card houses the 3 softswitches above which upon reset are configured in the default configuration:
+* Bank 2 is selected
+* ROM is readable.
+* RAM is writeable
 The card decodes the full A0-A15 address and if a memory location is selected from $D000 to $FFFF, it responsd based on the 3 softswitches - it activates the RAM for writing or reading, while disabling the ROM by using the /INH signal.
 There are 3 LEDs which show the status of the 3 soft switches.
 
