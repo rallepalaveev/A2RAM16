@@ -10,8 +10,11 @@ The logic of the card completely follows the design recommendations of the addit
 * One bank of 8kB is mapped to $E000-$FFFF
 
 Prohgram switches to be used:
-Address | Symbolic Name | Bank | Read From | Write to RAM? |
-|$C080 | READBSR2 | 2 | RAM | No |
+
+|Address  | Symbolic Name | Bank | Read From | Write to RAM? |
+|:--------|:--------------|:-----|:----------|:--------------|
+|$C080    | READBSR2      | 2    | RAM       | No            |
+
 $C081 WRITEBSR2 2 ROM Yes*
 $C082 OFFBSR2 2 ROM No
 $C083 RDWRBSR2 2 RAM Yes*
