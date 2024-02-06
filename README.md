@@ -40,11 +40,14 @@ The card houses the 3 softswitches above which upon reset are configured in the 
 * ROM is readable
 * RAM is writeable
 
-The 3 LEDs show the status of the soft switches BANK, WRRAM, RDRAM.
-
 The card decodes the full A0-A15 address and if a memory location is selected from $D000 to $FFFF, it responds based on the 3 softswitches and R/W - it activates the RAM for writing or reading, while disabling the ROM by using the /INH signal.
-There are 3 LEDs which show the status of the 3 soft switches.
+
+For the innitial design I used a transistor with open collector to drive the INH line. However, I quickly realized that I can do this with one of the 2 extra line drivers (LS125), by using the high ipmedance state when INH is not active and pulling it to GND when INH is activated. I also added 3 LEDs which show the status of the 3 soft switches BANK, WRRAM, RDRAM.
+
+A test to be made for quick check of functionality:
+]CALL-151           # Enter monitor
+*F800<F800.FFFFM    # Copy monitor to RAM
+*C083               # Set RAM for reading
+This sequence should not lead to the computer freezing with a responce "$C083-", because the monitor is copied to the RAM and continues to work from RAM.
 
 The benefit of the card is that programs which require 64kB of RAM can be used - primarily ProDOS and programs which can run with 64kB of RAM.
-
-
