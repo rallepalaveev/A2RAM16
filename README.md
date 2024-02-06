@@ -35,9 +35,12 @@ Bank-switched RAM status locations:
 Operation:
 
 The card houses the 3 softswitches above which upon reset are configured in the default configuration:
+
 * Bank 2 is selected
-* ROM is readable.
+* ROM is readable
 * RAM is writeable
+
+The 3 LEDs show the status of the soft switches BANK, WRRAM, RDRAM.
 
 The card decodes the full A0-A15 address and if a memory location is selected from $D000 to $FFFF, it responds based on the 3 softswitches and R/W - it activates the RAM for writing or reading, while disabling the ROM by using the /INH signal.
 There are 3 LEDs which show the status of the 3 soft switches.
