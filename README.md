@@ -2,7 +2,7 @@
 This is an expansion card for Apple2 computers, aimed at those early machines which only have up to 48kB of RAM and are missing the upper 16kB, which are mapped to the 12kB ROM space $D000-$FFFF.
 The cards that are available, AKA Language cards, not only occupy a slot, but also usually must have one of the DRAM chips removed from the motherboard and linked with a cable to that socket. They usually provide more than an additional 16kB.
 
-However, I wanted to create a card which simply adds the missing 16kB, based on modern chips like SRAM, and not needing to have any additional cables to connect to the motherboard.
+However, I wanted to create a card for the standart 50-pin slots, which simply adds the missing 16kB, based on modern chips like SRAM, and not needing to have any additional cables to connect to the motherboard.
 
 **IMPORTANT: It is very important to NOT use this card on computers which already have the 16kB available as there would be clashes between the card and the existing RAM and supporting logic.**
 
@@ -54,4 +54,5 @@ A test to be made for quick check of functionality:
 
 This sequence should not lead to the computer freezing with a responce "$C083-", because the monitor is copied to the RAM and continues to work from RAM.
 
-The benefit of the card is that programs which require 64kB of RAM can be used - primarily ProDOS and programs which can run with 64kB of RAM.
+The benefit of the card is that programs which require 64kB of RAM can be used - primarily ProDOS and programs which can run with 64kB of RAM. It works from any 50-pin slot.
+
