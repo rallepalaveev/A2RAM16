@@ -45,6 +45,6 @@ The 3 LEDs show the status of the soft switches BANK, WRRAM, RDRAM.
 The card decodes the full A0-A15 address and if a memory location is selected from $D000 to $FFFF, it responds based on the 3 softswitches and R/W - it activates the RAM for writing or reading, while disabling the ROM by using the /INH signal.
 There are 3 LEDs which show the status of the 3 soft switches.
 
-The benefit of the card is that programs which require 64kB of RAM can be used - primatily ProDOS.
+The benefit of the card is that programs which require 64kB of RAM can be used - primarily ProDOS and programs which can run with 64kB of RAM.
 
 
