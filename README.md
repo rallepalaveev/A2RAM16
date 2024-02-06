@@ -22,7 +22,7 @@ Bank-switched RAM soft switches:
 |$C083|RDWRBSR2|2|RAM|Yes*|
 |$C088|READBSR1|1|RAM|No|
 |$C089|WRITEBSR1|1|ROM|Yes*|
-|$C08A|OFFBSR1|1ROM|No|
+|$C08A|OFFBSR1|1|ROM|No|
 |$C08B|RDWRBSR1|1|RAM|Yes*|
 
 Bank-switched RAM status locations:
