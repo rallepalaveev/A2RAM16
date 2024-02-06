@@ -1,6 +1,6 @@
 # A2RAM16
 This is an expansion card for Apple2 computers, aimed at those early machines which only have up to 48kB of RAM and are missing the upper 16kB, which are mapped to the 12kB ROM space $D000-$FFFF.
-The cards that are available, AKA Language cards, not only occupy a slot, but also usually must have one of the DRAM chips removed from the motherboard and linked with a cable to that socket. They usually provide more than an additional 16kB.
+The cards that are available, AKA Language cards, not only occupy a slot, but also usually must have one of the DRAM chips removed from the motherboard and be linked with a cable to that socket. They usually provide more than an additional 16kB.
 
 However, I wanted to create a card for the standart 50-pin slots, which simply adds the missing 16kB, based on modern chips like SRAM, and not needing to have any additional cables to connect to the motherboard.
 
