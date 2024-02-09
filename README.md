@@ -43,7 +43,7 @@ The card houses the 3 softswitches above which upon reset are configured in the 
 The card decodes the full A0-A15 address and if a memory location is selected from $D000 to $FFFF, it responds based on the 3 softswitches and R/W - it activates the RAM for writing or reading, while disabling the ROM by using the /INH signal.
 
 For the innitial design V1.0 I used a transistor with open collector to drive the INH line. However, I quickly realized that I can do this with one of the 2 extra line drivers (LS125), by using the high ipmedance state when INH is not active and pulling it to GND when INH is activated. I also added 3 LEDs which show the status of the 3 soft switches BANK, WRRAM, RDRAM in the V1.1 version.
-After some research I found out that practically no software cares about the status bits $C0112 and $C011, so I removed them on V1.2 of the card, which reduced the chip count to just 2, with an extra diode addedd to drive the INH line.
+After some research I found out that practically no software cares about the status bits $C0112 and $C011, so I removed them in V1.2 of the card, which reduced the chip count to just 2, with an extra diode addedd to drive the INH line.
 
 A test to be made for quick check of functionality:
 
