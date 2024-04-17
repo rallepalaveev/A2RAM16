@@ -1,0 +1,26 @@
+Name      RAM16.v1.0-B;
+Partno    00;
+Date      06/02/24;
+Revision  01;
+Designer  Ralle Palaveev;
+Company   None;
+Assembly  None;
+Location  None;
+Device    g22V10;
+
+PIN [1..11]     = [A0..10];
+PIN [13..17]    = [A11..15];
+PIN 18          = DEF;
+PIN 19          = A12_out;
+PIN 20          = C08x;
+PIN 21          = C011;
+PIN 22          = C012;
+PIN 23          = BANK;
+
+C0xx            = A15 & A14 & !A13 & !A12 & !A11 & !A10 & !A9 & !A8;
+C08x            = C0xx & A7 & !A6 & !A5 & !A4;
+C01x            = C0xx & !A7 & !A6 & !A5 & A4 & !A3 & !A2;
+C011            = !(C01x & !A1 & A0);
+C012            = !(C01x & A1 & !A0);
+A12_out         = (BANK & !A13) # (A13 & A12);
+DEF             = A15 & A14 & (A13 # A12);

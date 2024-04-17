@@ -1,0 +1,40 @@
+Name      RAM16.v1.0-A;
+Partno    00;
+Date      06/02/24;
+Revision  01;
+Designer  Ralle Palaveev;
+Company   None;
+Assembly  None;
+Location  None;
+Device    g22V10;
+
+PIN 1      = F0;
+PIN 2      = A0;
+PIN 3      = A1;
+PIN 4      = A3;
+PIN 5      = C08x;
+PIN 7      = DEF;
+PIN 8      = RW;
+PIN 9      = RESET;
+PIN 14     = INH;
+PIN 15     = WRRAM;
+PIN 16     = RDRAM_LED;
+PIN 17     = WRRAM_LED;
+PIN 18     = BANK_LED;
+PIN 19     = OE;
+PIN 20     = RDRAM;
+PIN 21     = CE;
+PIN 22     = WE;
+PIN 23     = BANK;
+
+OE         = !RW;
+WE         = !F0 # RW;
+INH        = DEF & (RDRAM & RW # WRRAM & OE);
+CE         = !INH;
+WRRAM      = (WRRAM & !(C08x & !A0)) # (C08x & A0) # !RESET;
+RDRAM      = (RDRAM & RESET & !(C08x & (A0 $ A1))) # (C08x & !(A0 $ A1)); /* status in $C012 */
+BANK       = (BANK & !(C08x & A3)) # (C08x & !A3) # !RESET; /* status in $C011 */
+WRRAM_LED  = !WRRAM;
+RDRAM_LED  = !RDRAM;
+BANK_LED   = !BANK;
+
