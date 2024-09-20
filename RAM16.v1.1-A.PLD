@@ -29,10 +29,9 @@ PIN 23     = BANK;
 OE         = !RW;
 WE         = !F0 # RW;
 INH        = !(DEF & (RDRAM & RW # WRRAM & OE));
-WRRAM      = (WRRAM & !(C08x & !A0)) # (C08x & A0) # !RESET;
-RDRAM      = (RDRAM & RESET & !(C08x & (A0 $ A1))) # (C08x & !(A0 $ A1)); /* status in $C012 */
-BANK       = (BANK & !(C08x & A3)) # (C08x & !A3) # !RESET; /* status in $C011 */
+WRRAM      = (WRRAM & !(C08x & !A0 & F0)) # (C08x & A0 & F0) # !RESET;
+RDRAM      = (RDRAM & RESET & !(C08x & (A0 $ A1) & F0)) # (C08x & !(A0 $ A1) & F0); /* status in $C012 */
+BANK       = (BANK & !(C08x & A3 & F0)) # (C08x & !A3 & F0) # !RESET; /* status in $C011 */
 WRRAM_LED  = !WRRAM;
 RDRAM_LED  = !RDRAM;
 BANK_LED   = !BANK;
-
